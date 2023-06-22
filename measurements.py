@@ -29,7 +29,7 @@ def get_size_shape_features(tif_path, output_name):
     output_path = Path().absolute() + "\\" + output_name
     Path(output_path).mkdir(parents=True, exist_ok=True)
     subprocess.Popen(["cellprofiler", "-c", "-r", "-p", pipeline_path, "-o", output_path, "-i", tif_path])
-    return pd.read_csv(f"{output_path}/Nuclei.csv")
+    return pd.read_csv(f"{output_path}/PrimaryObjects.csv")
 
 def main():
     input_dir = sys.argv[1]
