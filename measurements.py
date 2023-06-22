@@ -2,6 +2,8 @@ import subprocess
 import sys
 import pandas as pd
 from pathlib import Path
+from glob import glob
+import shutil
 
 """
     purpose:
@@ -13,8 +15,15 @@ from pathlib import Path
         none
 """
 def convert(ims_path):
-    ims_to_tif_script_path = "C:\Users\amulya\Documents\imarisConverter\ACWS_convertImaris.py"
-    subprocess.Popen(["python3", ims_to_tif_script_path, "--channel", 0, "--directory", ims_path])
+    ims_to_tif_script_path = Path("C:/Users/amulya/Documents/imarisConverter/ACWS_convertImaris.py")
+    print(ims_to_tif_script_path)
+    subprocess.Popen(["python3", str(ims_to_tif_script_path), "--channel", "0", "--directory", ims_path])
+    tif_list = glob(str(ims_path) + "\\" + "*.tif")
+    target = str(ims_path) + "\\" + "tifs"
+    Path(target).mkdir(parents=True, exist_ok=True)
+    for tif in tif_list:
+        shutil.move(tif, target)
+    return target
 
 """
     purpose:
@@ -25,17 +34,21 @@ def convert(ims_path):
         DataFrame with information on nuclei/object size/shape measurements
 """
 def get_size_shape_features(tif_path, output_name):
-    pipeline_path = "single_cell_pipeline_progeria.cppipe"
-    output_path = Path().absolute() + "\\" + output_name
+    pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/single_cell_pipeline_progeria.cppipe").resolve()
+    print(pipeline_path)
+    output_path = str(Path().absolute()) + "\\" + output_name
     Path(output_path).mkdir(parents=True, exist_ok=True)
-    subprocess.Popen(["cellprofiler", "-c", "-r", "-p", pipeline_path, "-o", output_path, "-i", tif_path])
-    return pd.read_csv(f"{output_path}/PrimaryObjects.csv")
+    cppath = Path("C:/Program Files/CellProfiler/CellProfiler.exe").resolve()
+    subprocess.Popen([cppath, "-c", "-r", "-p", pipeline_path, "-o", output_path.encode('unicode_escape'), "-i", tif_path])
+
 
 def main():
-    input_dir = sys.argv[1]
+    input_dir = Path(sys.argv[1]).resolve()
+    print(input_dir)
+    target = str(input_dir) + "\\" + "images"
     output_dir = sys.argv[2]
-    convert(input_dir)
-    print(get_size_shape_features(input_dir, output_dir))
+    # tifdir = convert(input_dir)
+    get_size_shape_features(target, output_dir)
 
 if __name__ == "__main__":
     main()

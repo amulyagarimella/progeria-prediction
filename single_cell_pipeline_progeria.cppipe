@@ -2,7 +2,7 @@ CellProfiler Pipeline: http://www.cellprofiler.org
 Version:5
 DateRevision:425
 GitHash:
-ModuleCount:8
+ModuleCount:10
 HasImagePlaneDetails:False
 
 Images:[module_num:1|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
@@ -130,3 +130,29 @@ ExportToSpreadsheet:[module_num:8|svn_version:'Unknown'|variable_revision_number
     Combine these object measurements with those of the previous object?:No
     File name:DATA.csv
     Use the object name for the file name?:Yes
+
+OverlayObjects:[module_num:9|svn_version:'Unknown'|variable_revision_number:1|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Input:DNA
+    Name the output image:OverlayObjects
+    Objects:PrimaryObjects
+    Opacity:0.3
+
+SaveImages:[module_num:10|svn_version:'Unknown'|variable_revision_number:16|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:OverlayObjects
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:DNA
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:png
+    Output file location:Default Output Folder|
+    Image bit depth:8-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+    Save with lossless compression?:Yes
