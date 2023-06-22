@@ -18,6 +18,7 @@ class NeuralNetwork(nn.Module):
         )
 
     def forward(self, x):
+        # do stuff here
         x = self.flatten(x)
         logits = self.linear_relu_stack(x)
         prediction = torch.special.expit(logits)
