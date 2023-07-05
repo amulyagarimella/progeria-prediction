@@ -1,7 +1,10 @@
 import os
+import pandas as pd
+import numpy as np
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
+
 
 # train/test data
 train_dataloader = DataLoader(training_data, batch_size=64)
@@ -12,11 +15,11 @@ class NeuralNetwork(nn.Module):
         super().__init__()
         # self.flatten = nn.Flatten()
         self.linear_relu_stack = nn.Sequential(
-            nn.Linear(in_features=TODO, out_features=512),
+            nn.Linear(in_features=59, out_features=20),
             nn.ReLU(),
-            nn.Linear(in_features=512, out_features=512),
+            nn.Linear(in_features=20, out_features=20),
             nn.ReLU(),
-            nn.Linear(in_features=512, out_features=2),
+            nn.Linear(in_features=20, out_features=2),
         )
 
     def forward(self, x):

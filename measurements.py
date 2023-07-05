@@ -3,27 +3,16 @@ import sys
 import pandas as pd
 from pathlib import Path
 from glob import glob
-import shutil
 
-"""
-    purpose:
-        converts .ims to .tif
-        see: https://github.com/alexcwsmith/imarisConverter
-    input: 
-        ims_path = path to directory with .ims images
-    output:
-        none
-"""
-def convert(ims_path):
-    ims_to_tif_script_path = Path("C:/Users/amulya/Documents/imarisConverter/ACWS_convertImaris.py")
-    print(ims_to_tif_script_path)
-    subprocess.Popen(["python3", str(ims_to_tif_script_path), "--channel", "0", "--directory", ims_path])
-    tif_list = glob(str(ims_path) + "\\" + "*.tif")
-    target = str(ims_path) + "\\" + "tifs"
-    Path(target).mkdir(parents=True, exist_ok=True)
-    for tif in tif_list:
-        shutil.move(tif, target)
-    return target
+# def get_split_channel_mip (input_path, output_path):
+# # ./ImageJ-win64.exe --headless --console -macro ./RunBatch.ijm 'folder=../folder1 parameters=a.properties output=../samples/Output'
+#     imagej_path = r"C:\Users\amulya\Desktop\Fiji.app\ImageJ-win64.exe"
+#     macro_path = r"C:\Users\amulya\Documents\progeria-prediction\Channel_ZProj.ijm.ijm"
+# dir1 = input_path.replace('\\','/') + '/'
+# dir2 = output_path[:-1].replace('\\','\\\\')
+# args = f'dir1="{dir1}", dir2="{dir2}"'
+# print(args)
+# subprocess.Popen([imagej_path, "--headless", "--console", "-macro", macro_path, args]) 
 
 """
     purpose:
@@ -33,22 +22,20 @@ def convert(ims_path):
     output: 
         DataFrame with information on nuclei/object size/shape measurements
 """
-def get_size_shape_features(tif_path, output_name):
-    pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/single_cell_pipeline_progeria.cppipe").resolve()
-    print(pipeline_path)
+def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/pipeline_measureobjs_v2.cppipe").resolve()):
     output_path = str(Path().absolute()) + "\\" + output_name
     Path(output_path).mkdir(parents=True, exist_ok=True)
     cppath = Path("C:/Program Files/CellProfiler/CellProfiler.exe").resolve()
-    subprocess.Popen([cppath, "-c", "-r", "-p", pipeline_path, "-o", output_path.encode('unicode_escape'), "-i", tif_path])
-
+    subprocess.Popen([cppath, "-c", "-r", "-p", pipeline_path, "-o", output_path.encode('unicode_escape'), "-i", input_path])
 
 def main():
     input_dir = Path(sys.argv[1]).resolve()
     print(input_dir)
-    target = str(input_dir) + "\\" + "images"
     output_dir = sys.argv[2]
-    # tifdir = convert(input_dir)
-    get_size_shape_features(target, output_dir)
+    if len(sys.argv) > 3:
+        pipeline_path = Path(sys.argv[3]).resolve()
+        get_size_shape_features(input_dir, output_dir, pipeline_path)
+    get_size_shape_features(input_dir, output_dir)
 
 if __name__ == "__main__":
     main()
