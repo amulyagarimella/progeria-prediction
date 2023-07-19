@@ -4,16 +4,6 @@ import pandas as pd
 from pathlib import Path
 from glob import glob
 
-# def get_split_channel_mip (input_path, output_path):
-# # ./ImageJ-win64.exe --headless --console -macro ./RunBatch.ijm 'folder=../folder1 parameters=a.properties output=../samples/Output'
-#     imagej_path = r"C:\Users\amulya\Desktop\Fiji.app\ImageJ-win64.exe"
-#     macro_path = r"C:\Users\amulya\Documents\progeria-prediction\Channel_ZProj.ijm.ijm"
-# dir1 = input_path.replace('\\','/') + '/'
-# dir2 = output_path[:-1].replace('\\','\\\\')
-# args = f'dir1="{dir1}", dir2="{dir2}"'
-# print(args)
-# subprocess.Popen([imagej_path, "--headless", "--console", "-macro", macro_path, args]) 
-
 """
     purpose:
         run CellProfiler analysis pipeline - get size and shape info on each cell. these will be our input features.
@@ -22,7 +12,7 @@ from glob import glob
     output: 
         DataFrame with information on nuclei/object size/shape measurements
 """
-def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/pipeline_measureobjs_v2.cppipe").resolve()):
+def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/pipeline_measureobjs_v4.cppipe").resolve()):
     output_path = str(Path().absolute()) + "\\" + output_name
     Path(output_path).mkdir(parents=True, exist_ok=True)
     cppath = Path("C:/Program Files/CellProfiler/CellProfiler.exe").resolve()
