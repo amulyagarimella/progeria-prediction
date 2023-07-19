@@ -96,14 +96,14 @@ IdentifyPrimaryObjects:[module_num:7|svn_version:'Unknown'|variable_revision_num
     Fill holes in identified objects?:After both thresholding and declumping
     Automatically calculate size of smoothing filter for declumping?:No
     Automatically calculate minimum allowed distance between local maxima?:Yes
-    Handling of objects if excessive number of objects identified:Continue
+    Handling of objects if excessive number of objects identified:Erase
     Maximum number of objects:500
     Use advanced settings?:Yes
     Threshold setting version:12
     Threshold strategy:Global
-    Thresholding method:Otsu
+    Thresholding method:Minimum Cross-Entropy
     Threshold smoothing scale:1.3488
-    Threshold correction factor:1.0
+    Threshold correction factor:1.01
     Lower and upper bounds on threshold:0.0,1
     Manual threshold:0.0
     Select the measurement to threshold with:None
