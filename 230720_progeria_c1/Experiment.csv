@@ -1,0 +1,187 @@
+Key,Value
+CellProfiler_Version,4.2.5
+ChannelType_DNA,Grayscale
+ImageSet_Zip_Dictionary,b'X3Byb2dlcmlhX18wLm0+PGZhdGUgVGhlQz0iMCIgVGhlVD0iMCJaPSIwIi8+PC9QeD48L21hZ088P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCI/PjxPTUUgeG1sbnM9Imh0dHA6Ly93d3cub3Blbm1pY3Jvc2NvcHkub3JnL1NjaGVtYXMvT01FLzIwMTYtMDYiPjxJbWFnZSBJRD0iRE5BIj48UGl4ZWxzIERpbWVuc2lvbk9yZGVyPSJYWUNaVCIgSUQ9IlBpeGVsczpETkEiIFNpemVUPSIxIiBTaXplWD0iMSIgU2l6ZVk9IjEiPjxUaWZmRGF0YSBGaXJzdEM9IjAiIEZpcnN0VD0iMCIgRmlyc3RaPSIwIiBJRkQ9IjAiIFBsYW5lQ291bnQ9IjEiPjxVVUlEIEZpbGVOYW1lPSJmaWxlOi8vLy9pbWFnaW5nX3N0b3JhZ2Uvc2hhcmVkL3VzZXJzL0FtdWx5YS9jb252ZXJ0ZWRfdjIvcHJvZ2VyaWEvYzEvUHByb2dlcmlhX0lGX05fPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48T01FIHhtbG5zPSJodHRwOi8vd3d3Lm9wZW5taWNyb3Njb3B5Lm9yZy9TY2hlbWFzL09NRS8yMDE2LTA2Ij48SW1hZ2UgSUQ9IkROQSI+PFBpeGVscyBEaW1lbnNpb25PcmRlcj0iWFlDWlQiIElEPSJQaXhlbHM6RE5BIiBTaXplVD0iMSIgU2l6ZVg9IjEiIFNpemVZPSIxIj48VGlmZkRhdGEgRmlyc3RDPSIwIiBGaXJzdFQ9IjAiIEZpcnN0Wj0iMCIgSUZEPSIwIiBQbGFuZUNvdW50PSIxIj48VVVJRCBGaWxlTmFtZT0iZmlsZTovLy8vaW1hZ2luZ19zdG9yYWdlL3NoYXJlZC91c2Vycy9BbXVseWEvY29udmVydGVkX3YyL3Byb2dlcmlhL2MxL3JvZ2VyaTA3LjI5Ll9GPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48T01FIHhtbG5zPSJodHRwOi8vd3d3Lm9wZW5taWNyb3Njb3B5Lm9yZy9TY2hlbWFzL09NRS8yMDE2LTA2Ij48SW1hZ2UgSUQ9IkROQSI+PFBpeGVscyBEaW1lbnNpb25PcmRlcj0iWFlDWlQiIElEPSJQaXhlbHM6RE5BIiBTaXplVD0iMSIgU2l6ZVg9IjEiIFNpemVZPSIxIj48VGlmZkRhdGEgRmlyc3RDPSIwIiBGaXJzdFQ9IjAiIEZpcnN0Wj0iMCIgSUZEPSIwIiBQbGFuZUNvdW50PSIxIj48VVVJRCBGaWxlTmFtZT0iZmlsZTovLy8vaW1hZ2luZ19zdG9yYWdlL3NoYXJlZC91c2Vycy9BbXVseWEvY29udmVydGVkX3YyL3Byb2dlcmlhL2MxL1VUX1Byb2dlcmluX0xNTl9LOW1lMl9LOW1lM18yMDIyLTA5LTAxX0YweG1sdmVyc2lvbi4wImVuY29pbmdVVEY/T01FbnNwOi93dy5vcG9zeWdTL09NRTIwMTY2Ij48SW1hZ2UgSUQ9Ik5BPjxQaXhlbHMgZXJUIiBJRE5BIiBTaXplPSIxIiBTaXplWD0iMSJZPSIxIj48VGlmZkRhdGEgRmlyc3RDPSIwIiBGaXJzdFQ9IjAiIFo9IjAiSUZEPSJ0PSIxVUlEIEZpaWxlOi8vL2ltYW9yaGVkZXJzL3V2cHJvZ2VyaWEvY3JvaW5MX0s5bWUyMi05LTAxXw=='
+Pipeline_Pipeline,"CellProfiler Pipeline: http://www.cellprofiler.org
+Version:5
+DateRevision:425
+GitHash:
+ModuleCount:12
+HasImagePlaneDetails:False
+
+Images:[module_num:1|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['To begin creating your project, use the Images module to compile a list of files and/or folders that you want to analyze. You can also specify a set of rules to include only the desired files in your selected folders.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    :
+    Filter images?:Images only
+    Select the rule criteria:and (extension does isimage) (directory doesnot containregexp ""[\\\\/]\\."")
+
+Metadata:[module_num:2|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:['The Metadata module optionally allows you to extract information describing your images (i.e, metadata) which will be stored along with your measurements. This information can be contained in the file name and/or location, or in an external file.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Extract metadata?:No
+    Metadata data type:Text
+    Metadata types:{}
+    Extraction method count:1
+    Metadata extraction method:Extract from file/folder names
+    Metadata source:File name
+    Regular expression to extract from file name:^(?P<Plate>.*)_(?P<Well>[A-P][0-9]{2})_s(?P<Site>[0-9])_w(?P<ChannelNumber>[0-9])
+    Regular expression to extract from folder name:(?P<Date>[0-9]{4}_[0-9]{2}_[0-9]{2})$
+    Extract metadata from:All images
+    Select the filtering criteria:and (file does contain """")
+    Metadata file location:Elsewhere...|
+    Match file and image metadata:[]
+    Use case insensitive matching?:No
+    Metadata file name:None
+    Does cached metadata exist?:No
+
+NamesAndTypes:[module_num:3|svn_version:'Unknown'|variable_revision_number:8|show_window:False|notes:['The NamesAndTypes module allows you to assign a meaningful name to each image by which other modules will refer to it.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Assign a name to:All images
+    Select the image type:Grayscale image
+    Name to assign these images:DNA
+    Match metadata:[]
+    Image set matching method:Order
+    Set intensity range from:Image metadata
+    Assignments count:1
+    Single images count:0
+    Maximum intensity:255.0
+    Process as 3D?:No
+    Relative pixel spacing in X:1.0
+    Relative pixel spacing in Y:1.0
+    Relative pixel spacing in Z:1.0
+    Select the rule criteria:and (file does contain """")
+    Name to assign these images:DNA
+    Name to assign these objects:Cell
+    Select the image type:Grayscale image
+    Set intensity range from:Image metadata
+    Maximum intensity:255.0
+
+Groups:[module_num:4|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:['The Groups module optionally allows you to split your list of images into image subsets (groups) which will be processed independently of each other. Examples of groupings include screening batches, microtiter plates, time-lapse movies, etc.']|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Do you want to group your images?:No
+    grouping metadata count:1
+    Metadata category:None
+
+RescaleIntensity:[module_num:5|svn_version:'Unknown'|variable_revision_number:3|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:DNA
+    Name the output image:RescaleIntensity
+    Rescaling method:Stretch each image to use the full intensity range
+    Method to calculate the minimum intensity:Custom
+    Method to calculate the maximum intensity:Custom
+    Lower intensity limit for the input image:0.0
+    Upper intensity limit for the input image:1.0
+    Intensity range for the input image:0.0,1.0
+    Intensity range for the output image:0.0,1.0
+    Select image to match in maximum intensity:None
+    Divisor value:1.0
+    Divisor measurement:None
+
+Resize:[module_num:6|svn_version:'Unknown'|variable_revision_number:5|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:RescaleIntensity
+    Name the output image:Resize
+    Resizing method:Resize by a fraction or multiple of the original size
+    X Resizing factor:0.25
+    Y Resizing factor:0.25
+    Z Resizing factor:0.25
+    Width (x) of the final image:100
+    Height (y) of the final image:100
+    # of planes (z) in the final image:10
+    Interpolation method:Nearest Neighbor
+    Method to specify the dimensions:Manual
+    Select the image with the desired dimensions:None
+    Additional image count:0
+
+IdentifyPrimaryObjects:[module_num:7|svn_version:'Unknown'|variable_revision_number:15|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:Resize
+    Name the primary objects to be identified:IdentifyPrimaryObjects
+    Typical diameter of objects, in pixel units (Min,Max):100,400
+    Discard objects outside the diameter range?:No
+    Discard objects touching the border of the image?:No
+    Method to distinguish clumped objects:Intensity
+    Method to draw dividing lines between clumped objects:Intensity
+    Size of smoothing filter:1
+    Suppress local maxima that are closer than this minimum allowed distance:7.0
+    Speed up by using lower-resolution image to find local maxima?:Yes
+    Fill holes in identified objects?:After both thresholding and declumping
+    Automatically calculate size of smoothing filter for declumping?:No
+    Automatically calculate minimum allowed distance between local maxima?:Yes
+    Handling of objects if excessive number of objects identified:Erase
+    Maximum number of objects:500
+    Use advanced settings?:Yes
+    Threshold setting version:12
+    Threshold strategy:Global
+    Thresholding method:Minimum Cross-Entropy
+    Threshold smoothing scale:1.3488
+    Threshold correction factor:1.01
+    Lower and upper bounds on threshold:0.0,1
+    Manual threshold:0.0
+    Select the measurement to threshold with:None
+    Two-class or three-class thresholding?:Two classes
+    Log transform before thresholding?:No
+    Assign pixels in the middle intensity class to the foreground or the background?:Foreground
+    Size of adaptive window:200
+    Lower outlier fraction:0.1
+    Upper outlier fraction:0.1
+    Averaging method:Mean
+    Variance method:Standard deviation
+    # of deviations:2.0
+    Thresholding method:Otsu
+
+FillObjects:[module_num:8|svn_version:'Unknown'|variable_revision_number:2|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input object:IdentifyPrimaryObjects
+    Name the output object:FillObjects
+    Minimum hole size:64.0
+    Planewise fill:No
+    Filling method:Holes
+
+MeasureObjectSizeShape:[module_num:9|svn_version:'Unknown'|variable_revision_number:3|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select object sets to measure:FillObjects
+    Calculate the Zernike features?:Yes
+    Calculate the advanced features?:Yes
+
+ExportToSpreadsheet:[module_num:10|svn_version:'Unknown'|variable_revision_number:13|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the column delimiter:Comma ("","")
+    Add image metadata columns to your object data file?:No
+    Add image file and folder names to your object data file?:Yes
+    Select the measurements to export:No
+    Calculate the per-image mean values for object measurements?:Yes
+    Calculate the per-image median values for object measurements?:Yes
+    Calculate the per-image standard deviation values for object measurements?:Yes
+    Output file location:Default Output Folder|
+    Create a GenePattern GCT file?:No
+    Select source of sample row name:Metadata
+    Select the image to use as the identifier:None
+    Select the metadata to use as the identifier:None
+    Export all measurement types?:Yes
+    Press button to select measurements:FillObjects|AreaShape_HuMoment_1,FillObjects|AreaShape_HuMoment_0,FillObjects|AreaShape_HuMoment_2,FillObjects|AreaShape_HuMoment_4,FillObjects|AreaShape_HuMoment_5,FillObjects|AreaShape_HuMoment_3,FillObjects|AreaShape_HuMoment_6,FillObjects|AreaShape_Zernike_3_3,FillObjects|AreaShape_Zernike_3_1,FillObjects|AreaShape_Zernike_4_0,FillObjects|AreaShape_Zernike_4_2,FillObjects|AreaShape_Zernike_4_4,FillObjects|AreaShape_Zernike_9_5,FillObjects|AreaShape_Zernike_9_1,FillObjects|AreaShape_Zernike_9_7,FillObjects|AreaShape_Zernike_9_3,FillObjects|AreaShape_Zernike_9_9,FillObjects|AreaShape_Zernike_8_4,FillObjects|AreaShape_Zernike_8_0,FillObjects|AreaShape_Zernike_8_6,FillObjects|AreaShape_Zernike_8_8,FillObjects|AreaShape_Zernike_8_2,FillObjects|AreaShape_Zernike_6_0,FillObjects|AreaShape_Zernike_6_6,FillObjects|AreaShape_Zernike_6_2,FillObjects|AreaShape_Zernike_6_4,FillObjects|AreaShape_Zernike_5_1,FillObjects|AreaShape_Zernike_5_5,FillObjects|AreaShape_Zernike_5_3,FillObjects|AreaShape_Zernike_7_3,FillObjects|AreaShape_Zernike_7_7,FillObjects|AreaShape_Zernike_7_5,FillObjects|AreaShape_Zernike_7_1,FillObjects|AreaShape_Zernike_0_0,FillObjects|AreaShape_Zernike_1_1,FillObjects|AreaShape_Zernike_2_0,FillObjects|AreaShape_Zernike_2_2,FillObjects|AreaShape_BoundingBoxMinimum_Y,FillObjects|AreaShape_BoundingBoxMinimum_X,FillObjects|AreaShape_BoundingBoxMaximum_X,FillObjects|AreaShape_BoundingBoxMaximum_Y,FillObjects|AreaShape_Eccentricity,FillObjects|AreaShape_NormalizedMoment_2_1,FillObjects|AreaShape_NormalizedMoment_2_2,FillObjects|AreaShape_NormalizedMoment_2_3,FillObjects|AreaShape_NormalizedMoment_2_0,FillObjects|AreaShape_NormalizedMoment_0_2,FillObjects|AreaShape_NormalizedMoment_0_1,FillObjects|AreaShape_NormalizedMoment_0_0,FillObjects|AreaShape_NormalizedMoment_0_3,FillObjects|AreaShape_NormalizedMoment_1_3,FillObjects|AreaShape_NormalizedMoment_1_2,FillObjects|AreaShape_NormalizedMoment_1_1,FillObjects|AreaShape_NormalizedMoment_1_0,FillObjects|AreaShape_NormalizedMoment_3_3,FillObjects|AreaShape_NormalizedMoment_3_2,FillObjects|AreaShape_NormalizedMoment_3_0,FillObjects|AreaShape_NormalizedMoment_3_1,FillObjects|AreaShape_MedianRadius,FillObjects|AreaShape_CentralMoment_1_1,FillObjects|AreaShape_CentralMoment_1_2,FillObjects|AreaShape_CentralMoment_1_3,FillObjects|AreaShape_CentralMoment_1_0,FillObjects|AreaShape_CentralMoment_2_1,FillObjects|AreaShape_CentralMoment_2_3,FillObjects|AreaShape_CentralMoment_2_2,FillObjects|AreaShape_CentralMoment_2_0,FillObjects|AreaShape_CentralMoment_0_0,FillObjects|AreaShape_CentralMoment_0_2,FillObjects|AreaShape_CentralMoment_0_1,FillObjects|AreaShape_CentralMoment_0_3,FillObjects|AreaShape_SpatialMoment_0_1,FillObjects|AreaShape_SpatialMoment_0_2,FillObjects|AreaShape_SpatialMoment_0_0,FillObjects|AreaShape_SpatialMoment_0_3,FillObjects|AreaShape_SpatialMoment_2_2,FillObjects|AreaShape_SpatialMoment_2_3,FillObjects|AreaShape_SpatialMoment_2_0,FillObjects|AreaShape_SpatialMoment_2_1,FillObjects|AreaShape_SpatialMoment_1_1,FillObjects|AreaShape_SpatialMoment_1_3,FillObjects|AreaShape_SpatialMoment_1_0,FillObjects|AreaShape_SpatialMoment_1_2,FillObjects|AreaShape_Area,FillObjects|AreaShape_Orientation,FillObjects|AreaShape_EquivalentDiameter,FillObjects|AreaShape_Perimeter,FillObjects|AreaShape_InertiaTensorEigenvalues_1,FillObjects|AreaShape_InertiaTensorEigenvalues_0,FillObjects|AreaShape_MaxFeretDiameter,FillObjects|AreaShape_InertiaTensor_0_0,FillObjects|AreaShape_InertiaTensor_0_1,FillObjects|AreaShape_InertiaTensor_1_0,FillObjects|AreaShape_InertiaTensor_1_1,FillObjects|AreaShape_Center_X,FillObjects|AreaShape_Center_Y,FillObjects|AreaShape_EulerNumber,FillObjects|AreaShape_Compactness,FillObjects|AreaShape_Extent,FillObjects|AreaShape_MajorAxisLength,FillObjects|AreaShape_FormFactor,FillObjects|AreaShape_MinFeretDiameter,FillObjects|AreaShape_MaximumRadius,FillObjects|AreaShape_BoundingBoxArea,FillObjects|AreaShape_Solidity,FillObjects|AreaShape_MeanRadius,FillObjects|AreaShape_ConvexArea,FillObjects|AreaShape_MinorAxisLength,FillObjects|Location_Center_Z,FillObjects|Location_Center_Y,FillObjects|Location_Center_X,FillObjects|Parent_IdentifyPrimaryObjects,FillObjects|Number_Object_Number
+    Representation of Nan/Inf:NaN
+    Add a prefix to file names?:No
+    Filename prefix:MyExpt_
+    Overwrite existing files without warning?:No
+    Data to export:Do not use
+    Combine these object measurements with those of the previous object?:No
+    File name:DATA.csv
+    Use the object name for the file name?:Yes
+
+OverlayObjects:[module_num:11|svn_version:'Unknown'|variable_revision_number:1|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Input:Resize
+    Name the output image:OverlayObjects
+    Objects:FillObjects
+    Opacity:0.5
+
+SaveImages:[module_num:12|svn_version:'Unknown'|variable_revision_number:16|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:OverlayObjects
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:DNA
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:8-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+    Save with lossless compression?:Yes
+"
+Run_Timestamp,2023-07-20T18:15:19.065125

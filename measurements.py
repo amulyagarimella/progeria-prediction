@@ -18,22 +18,22 @@ def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Us
     cppath = Path("C:/Program Files/CellProfiler/CellProfiler.exe").resolve()
     subprocess.Popen([cppath, "-c", "-r", "-p", pipeline_path, "-o", output_path.encode('unicode_escape'), "-i", input_path])
 
-import tensorflow
+"""import tensorflow
 from stardist.models import StarDist2D
 from stardist.plot import render_label
 import skimage
 from csbdeep.utils import normalize
 import matplotlib.pyplot as plt
-
-def segment_measure_stardist(input_path, output_name):
-    """
+"""
+"""def segment_measure_stardist(input_path, output_name):
+    
     purpose:
         use StarDist to segment + get size and shape info on each cell. these will be our input features.
     input:
         tif_path = path to directory with .tif images
     output: 
         DataFrame with information on nuclei/object size/shape measurements 
-    """
+    
     # from cellprofiler source code
     desired_properties = [
         "label",
@@ -70,17 +70,17 @@ def segment_measure_stardist(input_path, output_name):
         plt.title("prediction + input overlay")
         plt.show()
         props = skimage.measure.regionprops_table(labels, properties=desired_properties)
-        # print(props)
+        # print(props)"""
 
 def main():
     input_dir = Path(sys.argv[1]).resolve()
     print(input_dir)
     output_dir = sys.argv[2]
-    segment_measure_stardist(input_dir, output_dir)
-    """if len(sys.argv) > 3:
+    # segment_measure_stardist(input_dir, output_dir)
+    if len(sys.argv) > 3:
         pipeline_path = Path(sys.argv[3]).resolve()
         get_size_shape_features(input_dir, output_dir, pipeline_path)
-    get_size_shape_features(input_dir, output_dir)"""
+    get_size_shape_features(input_dir, output_dir)
 
 if __name__ == "__main__":
     main()
