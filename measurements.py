@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 from glob import glob
 
-def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/pipeline_measureobjs_v6.cppipe").resolve()):
+def get_size_shape_features(input_path, output_name, pipeline_path = Path("C:/Users/amulya/Documents/progeria-prediction/pipeline_measureobjs_v7.cppipe").resolve()):
     """
     purpose:
         run CellProfiler analysis pipeline - get size and shape info on each cell. these will be our input features.
