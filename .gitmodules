@@ -1,0 +1,6 @@
+[submodule "aics-shparam"]
+	path = aics-shparam
+	url = https://github.com/AllenCell/aics-shparam.git
+[submodule "aics-segmentation"]
+	path = aics-segmentation
+	url = https://github.com/AllenInstitute/aics-segmentation.git
