@@ -48,9 +48,9 @@ def parameterize (binary_mask, lmax=16, ):
     coeffs = pd.DataFrame.from_dict({k : [v] for k, v in coeffs.items()})
     return coeffs
 
-def get_all_coeffs_ims (dir):
+def get_all_coeffs_ims (in_dir):
     coeffs_all = pd.DataFrame()
-    for fn in glob.glob(f"{dir}/*ims"):
+    for fn in glob.glob(f"{in_dir}/*ims"):
         print(fn)
         tables.file._open_files.close_all()
         try:
@@ -65,7 +65,8 @@ def get_all_coeffs_ims (dir):
         coeffs = parameterize(bm)
         coeffs = coeffs.assign(orig = fn)
         coeffs_all = pd.concat([coeffs_all, coeffs])
-    coeffs_all.to_csv(f"{dir}/aics_coeffs_ims.csv")
+    d_to_save = in_dir.split("/*")[0]
+    coeffs_all.to_csv(f"{d_to_save}/aics_coeffs_ims.csv")
     return coeffs_all
 
 def main():
