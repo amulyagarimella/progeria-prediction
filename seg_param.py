@@ -72,7 +72,7 @@ def main():
     get_all_coeffs_ims(sys.argv[1])
 
 if __name__ == '__main__':
-    progeria_dirs = ["Y:/users/IGS/Experiments/Expt28_IF For NP_P22_P25 progeria/Passage 22 Progeria/PostEX_P22progeria_IF_DAPI_LMNA_Nup_LMNB1_0.2", "Y:/users/Ajay/New progeria lines IF/Progerin_LMNA_K9ME2_K9ME4/2023-01-19", "Y:/users/Ajay/IF_Progeria1972/Late_passage/2023-02-07"]
+    progeria_dirs = ["Y:/users/IGS/Experiments/Expt28_IF For NP_P22_P25 progeria/Passage 22 Progeria/*/*", "Y:/users/Ajay/New progeria lines IF/Progerin_LMNA_K9ME2_K9ME4/2023-01-19", "Y:/users/Ajay/IF_Progeria1972/Late_passage/2023-02-07"]
     normal_dirs = ["Y:/users/IGS/Experiments/Expt28_IF For NP_P22_P25 progeria/Normal Progeria/PostEX_NP_IF_Progerin_LMNA_Nup_LMNB1", "Y:/users/IGS/Experiments/Expt28_IF For NP_P22_P25 progeria/Normal Progeria/PostEX_NP_IF_LMNA_K9me2_K9me3", "Y:/users/Ajay/IF_Progeria1972/Normal fibroblast/2023-02-10"]
     dirs = progeria_dirs + normal_dirs
     done_already = ["Y:/users/Ajay/IF_Progeria1972/Normal fibroblast/2023-02-10", "Y:/users/Ajay/IF_Progeria1972/Late_passage/2023-02-07"]
