@@ -51,6 +51,7 @@ def parameterize (binary_mask, lmax=16, ):
 def get_all_coeffs_ims (dir):
     coeffs_all = pd.DataFrame()
     for fn in glob.glob(f"{dir}/*ims"):
+        print(fn)
         tables.file._open_files.close_all()
         f = ims(fn,write=True)
         c2 = f[0][1]
