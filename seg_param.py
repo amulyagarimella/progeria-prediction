@@ -2,14 +2,11 @@ import numpy as np
 import scipy
 import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA
 import sys
-import pickle
 import skimage
 from imaris_ims_file_reader.ims import ims
-import h5py
 import tables
-np.random.seed(42) # for reproducibility
+import glob
 
 sys.path.insert(1, 'aics-shparam')
 from aicsshparam import shtools, shparam
@@ -17,12 +14,7 @@ from aicsshparam import shtools, shparam
 sys.path.insert(1, 'aics-segmentation')
 from aicssegmentation.core.pre_processing_utils import intensity_normalization, image_smoothing_gaussian_3d
 
-
-tables.file._open_files.close_all()
-fn = TODO IMS
-f = ims(fn,write=True)
-c1 = f[0][0]
-c2 = f[0][1]
+np.random.seed(42) # for reproducibility
 
 def preprocess_image (channel):
     intensity_scaling_param = [4000]
@@ -49,18 +41,28 @@ def binary_mask (channel, show=False):
         if show:
             plt.imshow(image_label_overlay)
             plt.show()
-    skimage.io.imsave("TODO Late_progeria_IF_Test_1_c2_binarymask_v2.tif", binary_mask)
     return binary_mask
 
-def (binary_mask, lmax=16):
-    (coeffs, _), (image_, mesh, grid_down, transform) = shparam.get_shcoeffs(image=binary_mask, lmax=lmax)
+def parameterize (binary_mask, lmax=16, ):
+    (coeffs, _), _ = shparam.get_shcoeffs(image=binary_mask, lmax=lmax)
     coeffs = pd.DataFrame.from_dict({k : [v] for k, v in coeffs.items()})
-    with open("TODO progeria_test_binary_v2_coefs_l16.pkl", "wb") as f:
-        pickle.dump(coeffs, f)
-    mesh_orig, img_output, centroid = shtools.get_mesh_from_image(image=binary_mask)
-    shtools.save_polydata(mesh, 'mesh_calc_binary_l16_v2.vtk')
-    shtools.save_polydata(mesh_orig, 'mesh_orig_binary_v2.vtk')
+    return coeffs
 
+def get_all_coeffs_ims (dir):
+    coeffs_all = pd.DataFrame()
+    for fn in glob.glob(f"{dir}/*ims"):
+        tables.file._open_files.close_all()
+        f = ims(fn,write=True)
+        c2 = f[0][1]
+        bm = binary_mask(preprocess_image(c2))
+        coeffs = parameterize(bm)
+        coeffs = coeffs.assign(orig = fn)
+        coeffs_all = pd.concat([coeffs_all, coeffs])
+    coeffs_all.to_csv(f"{dir}/aics_coeffs_ims.csv")
+    return coeffs_all
 
+def main():
+    get_all_coeffs_ims(sys.argv[1])
 
-
+if __name__ == '__main__':
+    main()
