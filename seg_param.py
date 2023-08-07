@@ -53,7 +53,13 @@ def get_all_coeffs_ims (dir):
     for fn in glob.glob(f"{dir}/*ims"):
         print(fn)
         tables.file._open_files.close_all()
-        f = ims(fn,write=True)
+        try:
+            f = ims(fn,write=True)
+        except Exception as e:
+            print("file opening unsuccessful")
+            print(e)
+            continue
+        print("file opening successful")
         c2 = f[0][1]
         bm = binary_mask(preprocess_image(c2))
         coeffs = parameterize(bm)
